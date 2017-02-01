@@ -32,4 +32,6 @@ lazy val structure   = project.in(file("chapter-structure"))
 
 lazy val test        = project.in(file("chapter-testdriven"))
 
+lazy val testb       = project.in(file("chapter-testdrivenb"))
+
 lazy val up          = project.in(file("chapter-up-and-running"))
