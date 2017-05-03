@@ -2,3 +2,26 @@ version: '2'
 services:
   akka:
     build: .
+
+  statsdService:
+    image: ennexa/statsd
+    ports:
+     - "8125:8125/udp"
+     - "8126:8126"
+
+  graphiteService:
+    image: praekeltfoundation/graphite
+    ports:
+     - "8000:8000"
+     - "2003:2003"
+
+  grafanaService:
+    image: grafana/grafana
+    ports:
+     - "80:3000"
+
+  elasticService:
+    image: itzg/elasticsearch
+    ports:
+     - "9200:9200"
+     - "9300:9300"
